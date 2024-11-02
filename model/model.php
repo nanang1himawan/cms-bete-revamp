@@ -17,8 +17,8 @@ class model
         // return mysqli_connect("localhost", "root", "", "belitiketevent-dev");
         // return mysqli_connect("localhost", "root", "", "customer-double");
         // return mysqli_connect("localhost", "omnitynd_bete", "g93X4g2_s", "omnitynd_bete");
-        // return mysqli_connect("localhost", "root", "", "bete4");
-        return mysqli_connect("localhost", "omnitynd_dev", "password_omnitynd_dev", "omnitynd_dev_bete");
+          return mysqli_connect("localhost", "root", "", "bete2");
+        // return mysqli_connect("localhost", "omnitynd_dev", "password_omnitynd_dev", "omnitynd_dev_bete");
         // return mysqli_connect("leokrisnoto.com", "leokrisn", "511MwrsBm2", "leokrisn_bete_dev");
     }
 
@@ -36,7 +36,7 @@ class model
         if (mysqli_num_rows($this->execute($query1)) == 1) {
             $query = "UPDATE `auth` SET `otp`=\"$otp\" WHERE `id_actor` = \"$id_organizer\"";
         } else {
-            $query = "INSERT INTO `auth` (`id_actor`,`otp`) VALUES ('$id_organizer', '$otp')";
+            $query = "INSERT INTO `auth` (`id`,`id_actor`,`otp`) VALUES ('$id','$id_organizer','$otp')";
         }
 
         if ($this->execute($query)) {

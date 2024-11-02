@@ -15,7 +15,7 @@ if (isset($_POST['buttonCreateOrganizer'])) {
         $phone,
         $id_npwp,
     );
-
+    var_dump($hasil);
     echo '<META HTTP-EQUIV="Refresh" Content="0; URL=createOrganizer.php">';
     exit;
 } elseif (isset($_POST['addCategory'])) {
